@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'consolas';
+    background: #f7f0e9;
+    transition: .6s;
+}
+h1{
+    font-size: 3em;
+    color: #3d3935;
+}
+#container{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+.easter{
+    font-size: 1em;
+    margin: 20px;
+    color:#f7f0e9;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input{
+    margin-top: 10px;
+    display: none;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 140, 255);
+    border-radius: 34px;
+    transition: .3s;
+}
+.slider::before{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: yellow;
+    border-radius: 50%;
+    transition: .4s;
+}
+input:checked + .slider{
+    background: #3f03af;
+}
+input:checked + .slider::before{
+    background: rgb(231, 228, 228);
+    transform: translateX(26px);
+}
+.dark-mode{
+    background: #000000;
+}
+.dark-mode h1 {
+    color:#00ff00;
+}
+.dark-mode .image {
+    color: #00ff00;
+}
+.secret{
+    font-size: 3px;
+    text-align: center;
+}
+.secret span{
+    color: #f7f0e9;
+    
+}
